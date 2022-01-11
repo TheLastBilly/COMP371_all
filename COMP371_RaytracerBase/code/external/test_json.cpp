@@ -25,7 +25,7 @@ bool test_parse_geometry(json& j){
         
         std::string type;
         if(itr->contains("type")){
-            type = (*itr)["type"];
+            type = static_cast<std::string>( (*itr)["type"]);
         } else {
             cout<<"Fatal error: geometry shoudl always contain a type!!!"<<endl;
             return false;
@@ -61,7 +61,7 @@ bool test_parse_lights(json& j){
         
         std::string type;
         if(itr->contains("type")){
-            type = (*itr)["type"];
+            type = static_cast<std::string>((*itr)["type"]);
         } else {
             cout<<"Fatal error: light shoudl always contain a type!!!"<<endl;
             return false;
@@ -98,7 +98,7 @@ bool test_parse_output(json& j){
         
         std::string filename;
         if(itr->contains("filename")){
-            filename = (*itr)["filename"];
+            filename = static_cast<std::string>((*itr)["filename"]);
         } else {
             cout<<"Fatal error: output shoudl always contain a filename!!!"<<endl;
             return false;
