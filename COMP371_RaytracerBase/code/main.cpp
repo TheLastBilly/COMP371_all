@@ -17,7 +17,6 @@
 #include "external/json.hpp"
 #include "external/simpleppm.h"
 
-
 using namespace std;
 
 int test_eigen();
